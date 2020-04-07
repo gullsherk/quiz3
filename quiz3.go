@@ -3,6 +3,7 @@ package main
 import (
     "html/template"
     "net/http"
+    "fmt"
 )
 
 
@@ -45,5 +46,6 @@ func main() {
     http.HandleFunc("/france", france)
     http.HandleFunc("/message", message)
     
+    fmt.Println("Listening on port 8080")
     http.ListenAndServe(":8080", nil)
 }
